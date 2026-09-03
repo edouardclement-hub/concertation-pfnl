@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page introuvable — Concertation PFNL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #FCFCFA; color: #16211A; font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+         font-size: 15px; line-height: 1.6; display: flex; align-items: center;
+         justify-content: center; min-height: 100vh; }
+  .boite { max-width: 520px; padding: 40px 28px; text-align: center; }
+  .beacon { width: 52px; height: 52px; border-radius: 50%; background: #1F7A4D;
+            position: relative; margin: 0 auto 22px; }
+  .beacon::after { content: ''; position: absolute; inset: 16px; border-radius: 50%; background: #FCFCFA; }
+  .beacon::before { content: ''; position: absolute; inset: 7px; border-radius: 50%;
+                    border: 2px solid rgba(255,255,255,0.55); }
+  h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #135A37; }
+  p { color: #4E5A51; margin: 12px 0 26px; }
+  .liens { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  a.bouton { display: inline-block; text-decoration: none; font-weight: 700; font-size: 14.5px;
+             padding: 12px 22px; border-radius: 8px; background: #135A37; color: #fff; }
+  a.discret { background: none; color: #135A37; border: 1px solid #E3E6E0; }
+</style>
+<div class="boite">
+  <div class="beacon" aria-hidden="true"></div>
+  <h1>Cette page n'existe pas</h1>
+  <p>Le lien est peut-être incomplet, ou la page a changé d'adresse.</p>
+  <div class="liens">
+    <a class="bouton" href="/">Lire le numéro courant</a>
+    <a class="bouton discret" href="/suggerer/">Soumettre une information</a>
+  </div>
+</div>
+</html>
