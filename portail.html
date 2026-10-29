@@ -442,10 +442,17 @@
       document.getElementById('tab-' + v).classList.toggle('active', v === id);
     });
     window.scrollTo(0, 0);
+    if (id === 'numero') { majTitre(); } else { document.title = 'Concertation PFNL — Portail'; }
   }
   function showEdition(id) {
     document.getElementById('ed01').hidden = (id !== 'ed01');
     document.getElementById('ed02').hidden = (id !== 'ed02');
+    majTitre();
+  }
+  function majTitre() {
+    var visible = document.querySelector('#view-numero > div[id^="ed0"]:not([hidden])');
+    var n = visible ? visible.querySelector('.meta .n') : null;
+    document.title = n ? 'La Vigie PFNL — ' + n.textContent : 'Concertation PFNL — Portail';
   }
   function pickTheme(btn) {
     curTheme = btn.dataset.t;
@@ -476,6 +483,7 @@
     var sel = document.getElementById('reg');
     regs.forEach(function(r){ var o = document.createElement('option'); o.value = r; o.textContent = r; sel.appendChild(o); });
     renderExp();
+    majTitre();
   })();
   function copierTexte(id, btn) {
     var champ = document.getElementById(id);
